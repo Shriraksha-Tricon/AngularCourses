@@ -1,0 +1,11 @@
+<!-- ngClass Directive to change background of search bar when we type something -->
+<div class="search-div" [ngClass]="{changeBackground: searchValue != ''}">
+    <span><b>Search : </b></span>
+    
+    <!-- Event Binding -->
+    <!--<input type="text" (input)="changeSearchValue($event)">--> 
+
+    <!-- Two-Way Data Binding -->
+    <input type="text" [(ngModel)] = "searchValue" >
+    <span *ngIf = "searchValue != '' "> You Searched for "{{searchValue}}" </span>
+</div>

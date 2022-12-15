@@ -1,0 +1,15 @@
+<iframe src="Child.html" id="child" style="height: 200px; width: 200px; padding: 20px"></iframe>
+
+<h1 id="test1">To Be Changed</h1>
+
+<form name="form" id="parForm">
+    <input type="text" name="msg" value="Your Message" />
+    <input type="button" value="Send" onclick="send()" />
+</form>
+
+<script>
+    childWin = document.getElementById('child').contentWindow;
+    function send(){
+        childWin.document.getElementById('test2').innerHTML = document.getElementById('parForm').elements.msg.value;
+    }
+</script>

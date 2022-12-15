@@ -1,0 +1,13 @@
+<h1 id="test2">To Be Changed</h1>
+
+<form name="form" id="req">
+    <input type="text" name="msg" value="Your Message" />
+    <input type="button" value="Send" onclick="sendData()" />
+</form>
+
+<script>
+    parent = window.parent;
+    function sendData(){
+        parent.document.getElementById('test1').innerHTML = document.getElementById('req').elements.msg.value;
+    }
+</script>

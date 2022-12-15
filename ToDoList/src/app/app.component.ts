@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,  HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TO DO LIST';
-  list: any[] = [];
+  list: any [] = [];
+
+
+  @HostListener('window:load')onLoad() {
+    const value = localStorage.getItem('TodoList')
+    console.log(value);
+    
+    
+ }
 
   onSubmit(item: string){
     this.list.push({id:this.list.length, name:item})
@@ -19,3 +27,4 @@ export class AppComponent {
     this.list=this.list.filter(item=>item.id!==id);
   }
 }
+

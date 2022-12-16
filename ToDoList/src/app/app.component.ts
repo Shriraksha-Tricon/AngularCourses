@@ -13,8 +13,6 @@ export class AppComponent {
   @HostListener('window:load')onLoad() {
     const value = localStorage.getItem('TodoList')
     console.log(value);
-    
-    
  }
 
   onSubmit(item: string){

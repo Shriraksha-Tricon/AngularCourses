@@ -10,9 +10,14 @@ export class AppComponent {
   list: any [] = [];
 
 
-  @HostListener('window:load')onLoad() {
+@HostListener('window:load')onLoad() {
     const value = localStorage.getItem('TodoList')
-    console.log(value);
+    if(localStorage){
+      let value = localStorage.getItem('TodoList')
+      if(value!=null){
+        console.log(value)
+      }
+    }
  }
 
   onSubmit(item: string){

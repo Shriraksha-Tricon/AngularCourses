@@ -1,16 +1,16 @@
-import { Component,  HostListener } from '@angular/core';
+import { Component,  HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'TO DO LIST';
   list: any [] = [];
 
 
-@HostListener('window:load')onLoad() {
+/* @HostListener('window:load')onLoad() {
     const value = localStorage.getItem('TodoList')
     if(localStorage){
       let value = localStorage.getItem('TodoList')
@@ -18,7 +18,11 @@ export class AppComponent {
         console.log(value)
       }
     }
- }
+ } */
+
+ngOnInit(){
+  this.list = JSON.parse(localStorage.getItem('TodoList') || '{}');
+}
 
   onSubmit(item: string){
     this.list.push({id:this.list.length, name:item})

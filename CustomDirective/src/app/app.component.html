@@ -19,5 +19,11 @@
   <p> This is a demo to create custom ngStyle Directive </p>
 </div>
 
-
-<!-- setBackGround -->
+<!-- Structural Directive -->
+<button class="btn btn-notice" (click)="displayNotice()">
+  Show Notice
+</button>
+<div class="info-container notice" *ngIf="display">
+  <h3> This is important Notice! </h3>
+  <p> This is the notice issued for all website users. </p>
+</div>

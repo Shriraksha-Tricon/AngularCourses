@@ -18,7 +18,7 @@ export class AppComponent {
 
   getMostLikedVideo(){
     let videoCopy = [...this.videos];
-    return videoCopy.sort((curr, next) => next.likes - curr.likes)[0];
+    return videoCopy.sort((curt, next) => next.likes - curt.likes)[0];
   }
 
 }

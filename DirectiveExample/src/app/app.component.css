@@ -9,7 +9,7 @@
 }
 
 .video-card{
-    width:220px;
+    width:350px;
     height: 320px;
     margin: 10px 10px;
     background-color: #F8F9F9;
@@ -21,7 +21,7 @@
     margin: 10px 5px;
 }
 .video-data{
-    margin: 5px;
+    margin: 1px;
     font-size: 14px;
 
 }

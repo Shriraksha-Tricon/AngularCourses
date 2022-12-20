@@ -13,4 +13,12 @@ export class AppComponent {
     {title: 'My Video 2', share: 215, likes: 325, dislikes: 12, tumbline: 'assets/images/img-2.jpg'},
     {title: 'My Video 3', share: 513, likes: 105, dislikes: 12, tumbline: 'assets/images/img-3.jpg'}
   ]
+
+  mostLikedVideo = this.getMostLikedVideo();
+
+  getMostLikedVideo(){
+    let videoCopy = [...this.videos];
+    return videoCopy.sort((curr, next) => next.likes - curr.likes)[0];
+  }
+
 }

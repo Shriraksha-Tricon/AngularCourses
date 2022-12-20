@@ -12,7 +12,11 @@
 </div>
 
 <div appClass [display]="{container: true, 'change-font': true }">
-  <p> This is a demo to create custom ngCClass Directive </p>
+  <p> This is a demo to create custom ngClass Directive </p>
+</div>
+
+<div class="container" appStyle [setStyle]="{backgroundColor: active ? 'Green' : 'Red', color: 'white', fontWeight: 'bold'}">
+  <p> This is a demo to create custom ngStyle Directive </p>
 </div>
 
 

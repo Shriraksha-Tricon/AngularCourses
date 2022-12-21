@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./java-script.component.css']
 })
 export class JavaScriptComponent {
-
+  title= 'JavaScript';
 }

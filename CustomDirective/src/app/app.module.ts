@@ -7,7 +7,8 @@ import { HighlightDirective } from './CustomDirectives/highlight.directive';
 import { HoverDirective } from './CustomDirectives/hover.directive';
 import { BetterhighlightDirective } from './CustomDirectives/betterhighlight.directive';
 import { ClassDirective } from './CustomDirectives/class.directive';
-import { StyleDirective } from './CustomDirectives/style.directive'
+import { StyleDirective } from './CustomDirectives/style.directive';
+import { IfDirective } from './CustomDirectives/if.directive'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StyleDirective } from './CustomDirectives/style.directive'
     HoverDirective,
     BetterhighlightDirective,
     ClassDirective,
-    StyleDirective
+    StyleDirective,
+    IfDirective
   ],
   imports: [
     BrowserModule

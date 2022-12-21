@@ -27,3 +27,11 @@
   <h3> This is important Notice! </h3>
   <p> This is the notice issued for all website users. </p>
 </div>
+
+<!-- ngSwitch Directive -->
+<div class="container" [ngSwitch]="occupation">
+  <p *ngSwitchCase="'teacher'"> This paragraph is displayed when the occupation is Teacher </p>
+  <p *ngSwitchCase="'designer'"> This paragraph is displayed when the occupation is Designer </p>
+  <p *ngSwitchCase="'lawyer'"> This paragraph is displayed when the occupation is Lawyer </p>
+  <p *ngSwitchDefault> This paragraph is default and will be displayed if no case matches switch expression </p>
+</div>

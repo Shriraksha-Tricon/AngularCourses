@@ -4,13 +4,16 @@ import { EnrollService } from '../Services/enroll.service';
 @Component({
   selector: 'app-java-script',
   templateUrl: './java-script.component.html',
-  styleUrls: ['./java-script.component.css']
+  styleUrls: ['./java-script.component.css'],
+  providers: [EnrollService]
 })
 export class JavaScriptComponent {
   title= 'JavaScript';
 
+  //Dependency Injection
+  constructor(private enrollService : EnrollService){ }
+
   onEnroll(){
-    const enrollService = new EnrollService;
-    enrollService.OnEnrollClicked(this.title);
+    this.enrollService.OnEnrollClicked(this.title);
   }
 }
